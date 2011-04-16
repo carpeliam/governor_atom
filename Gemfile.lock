@@ -1,8 +1,8 @@
 PATH
   remote: ./
   specs:
-    governor_atom (0.0.0)
-      governor
+    governor_atom (0.1.0)
+      governor (>= 0.3.0)
 
 GEM
   remote: http://rubygems.org/
