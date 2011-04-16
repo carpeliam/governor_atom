@@ -1,6 +1,30 @@
 = governor_atom
 
-Description goes here.
+*Governor* (named after Rod Blagojevich) is the pluggable blogging platform
+for Rails, built for people who want to build their blog into their website,
+not build their website into their blog.
+
+*governor_atom* is a plugin for Governor, allowing a blog to publish an ATOM
+feed of its articles.
+
+== Dependencies
+
+* Governor, version 0.3.0 or higher.
+
+== Setting up
+
+First, install Governor[http://carpeliam.github.com/governor/]. Then, in
+your Gemfile, add the following:
+
+    gem 'governor_atom'
+
+Once you've installed the gem into your app, just add the auto-discovery link
+tag to your layout:
+
+    <%= auto_discovery_link_tag(:atom, articles_path(:format => :atom), :title => 'your title goes here') %>
+
+If you're not using the default +articles+ as a resource type, replace
++articles_path+ with the path to your resource type.
 
 == Contributing to governor_atom
  

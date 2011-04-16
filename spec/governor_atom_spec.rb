@@ -1,7 +1,9 @@
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'spec_helper'
 
-describe "GovernorAtom" do
-  it "fails" do
-    fail "hey buddy, you should probably rename this file and start specing for real"
+module Governor
+  describe GovernorAtom do
+    it "registers the plugin" do
+      Governor::PluginManager.plugins.size == 1
+    end
   end
 end
