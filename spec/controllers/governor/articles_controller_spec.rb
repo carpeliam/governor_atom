@@ -22,6 +22,9 @@ module Governor
       it "has the title of the article" do
         response.should have_selector 'feed entry title', :content => 'Some article'
       end
+      it "doesn't have a summary if the description is blank" do
+        response.should_not have_selector 'feed entry summary'
+      end
       it "has the content of the article" do
         response.should have_selector 'feed entry content', :content => "It's about the benjis"
       end

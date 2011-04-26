@@ -8,7 +8,7 @@ atom_feed do |feed|
       feed.entry(article) do |entry|
 
         entry.title article.title
-        entry.summary article.description
+        entry.summary(article.description) if article.description.present?
         entry.content truncate(strip_tags(Governor::Formatters.format_article(article)), :length => 100)
 
         entry.author do |author|
