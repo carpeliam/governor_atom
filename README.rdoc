@@ -13,9 +13,9 @@ feed of its articles.
 
 == Setting up
 
-First, install Governor[http://carpeliam.github.com/governor/]. Then, in
-your Gemfile, add the following:
+In your Gemfile, add the following:
 
+    gem 'governor'
     gem 'governor_atom'
 
 Once you've installed the gem into your app, just add the auto-discovery link
